@@ -54,6 +54,9 @@ confirmEmail.heading = Cadarnhau’r cyfeiriad e-bost
 confirmEmail.change = Newid
 confirmEmail.changeContext = Newid eich cyfeiriad e-bost
 
+optOutCard.heading = Optio allan o’r cynllun Troi Treth yn Ddigidol ar gyfer TAW
+optOutCard.content = Ni allwch optio allan os yw trosiant trethadwy eich cleient wedi bod dros £85,000 ar unrhyw adeg ers 1 Ebrill 2019.
+
 clientDetailsCard.title = Manylion cleient
 clientDetailsCard.info = Newid manylion busnes, cyswllt a TAW cleient
 clientDetailsCard.link = Bwrw golwg ar fanylion TAW eich cleient

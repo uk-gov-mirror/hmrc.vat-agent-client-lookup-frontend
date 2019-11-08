@@ -62,6 +62,7 @@ trait AppConfig extends ServicesConfig {
   val returnDeadlinesUrl: String
   val classicServicesSignInUrl: String
   val accessibilityLinkUrl: String
+  val optOutMtdVatUrl: String
   val cancelRegistrationUrl: String
 }
 
@@ -135,6 +136,8 @@ class FrontendAppConfig @Inject()(val runModeConfiguration: Configuration, envir
 
   override lazy val emailVerificationBaseUrl: String = baseUrl(Keys.emailVerificationBaseUrl)
 
+  override lazy val optOutMtdVatUrl : String = getString(Keys.optOutMtdVatHost) + getString(Keys.optOutMtdVatUrl)
+
   override lazy val vatCertificateUrl: String = getString(Keys.vatSummaryFrontendHost) + getString(Keys.vatCertificateEndpoint)
   override lazy val submittedReturnsUrl: Int => String = yearValue => getString(Keys.viewVatReturnsFrontendHost) +
     getString(Keys.submittedReturnsEndpoint) + s"$yearValue"
@@ -144,3 +147,4 @@ class FrontendAppConfig @Inject()(val runModeConfiguration: Configuration, envir
 
   override val cancelRegistrationUrl: String = getString(ConfigKeys.deregisterVatFrontendHost) + getString(ConfigKeys.deregisterVatFrontendUrl)
 }
+
